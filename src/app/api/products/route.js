@@ -4,23 +4,18 @@ import { MONGO_DB } from "@/app/database/db";
 import { product } from "@/app/database/schema/product";
 
 export async function GET(){
-   
-
-  let Data = []
-   try {
-    await mongoose.connect(MONGO_DB)
-    Data =await product.find();
-   console.log("connected")
-
-
-    
-   } catch (error) {
-    Data ={ success :false}
-    console.log("error")
-   }
-
-    return NextResponse.json({result:Data, success:true})};
-
+    let data = [];
+    let success=true;
+    try {
+      await mongoose.connect(MONGO_DB);
+    data = await product.findone({name:"abc"});
+      
+  } catch (error) {
+      data={result:"error"}
+      success = false
+    }
+    return NextResponse.json({result:data ,success:true})
+  }
 
     export async function POST(req){
         const payload = await req.json();

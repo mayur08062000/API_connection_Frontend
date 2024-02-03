@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export default function page() {
   return (
-    <div>
-      <Link href="./addproduct">addproducts</Link>
-      <Link href="./addproduct">addproducts</Link>
+    <div className="container ">
+      <Link className="btn" href="./addproduct">Add Products </Link>
+      <Link className="btn" href="./products">Add List </Link>
     </div>
   )
 }

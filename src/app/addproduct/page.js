@@ -31,7 +31,7 @@ export default function page() {
         <input type='text' value={color} onChange={(e)=>setColor(e.target.value) } placeholder='Enter your color' className="input"></input >
         <input type='text'value={category} onChange={(e)=>setCategory(e.target.value) } placeholder='Enter your category' className="input"></input >
        <button className="btn" onClick={addProduct} >add product</button>
-<Link href="./">home</Link>
+<Link className="btn" href="./">home</Link>
     </div>
   )
 }
