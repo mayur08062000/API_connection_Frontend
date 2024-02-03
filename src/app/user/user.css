@@ -1,0 +1,34 @@
+/* Add styling to the container */
+div {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  /* Style the heading */
+  h1 {
+    color: #333;
+  }
+  
+  /* Style the input fields */
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  /* Style the button */
+  .btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Add hover effect to the button */
+  .btn:hover {
+    background-color: #45a049;
+  }
+  
