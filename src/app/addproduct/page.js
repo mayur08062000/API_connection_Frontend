@@ -1,4 +1,5 @@
-"use client"
+   "use client"
+import Link from "next/link";
 import { useState } from "react";
 export default function page() {
 
@@ -14,19 +15,11 @@ export default function page() {
             method:"POST",
             body:JSON.stringify({name,price,color,category})
         });
-
-
               result = await result.json();
         if(result.success){
             alert("new product added")
-        
         }
-
-
     }
-
-
-
   return (  
     <div>
         <h1>
@@ -37,8 +30,8 @@ export default function page() {
         <input type='text' value={price} onChange={(e)=>setPrice(e.target.value)} placeholder='Enter product price' className="input"></input >
         <input type='text' value={color} onChange={(e)=>setColor(e.target.value) } placeholder='Enter your color' className="input"></input >
         <input type='text'value={category} onChange={(e)=>setCategory(e.target.value) } placeholder='Enter your category' className="input"></input >
-       <button className="btn" onClick={addProduct}>add product</button>
-
+       <button className="btn" onClick={addProduct} >add product</button>
+<Link href="./">home</Link>
     </div>
   )
 }
